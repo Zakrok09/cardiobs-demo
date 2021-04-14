@@ -10,7 +10,7 @@ body {
 .grid {
     width: 100%;
     display: grid;
-    grid-template: 70px 40px 80vh 15vh / 15% 70% 15%;
+    grid-template: 70px 45px auto 15vh / 15% 70% 15%;
 }
 
 header {
@@ -58,7 +58,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    padding: 8px 10px;
+    padding: 9px 10px;
 }
 
 nav ul li a {
@@ -73,13 +73,75 @@ a {
 
 main {
     grid-area: 3 / 1 / span 1 / span 3;
+    display: grid;
+
+    grid-template: 45vw 600px 600px / repeat(13, 1fr);
+}
+
+#landing-image {
+    grid-area: 1 / 1 / 1 / span 13;
 
     background-image: url("/images/medics.jpg");
     background-position: center;
     background-size: cover;
 
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+#blacken {
+    grid-area: 1 / 1 / 1 / span 13;
+    background-color: black;
+    opacity: 0.3;
+}
+
+h1 {
+    z-index: 3;
+    background-color: #457B9D;
+    padding: 14px;
+    border-radius: 2px;
+    font-size: 3rem;
+    color: #e6ecec;
+    margin: 0;
+
+    font-family: Roboto, serif;
+}
+
+#landing-image span {
+    z-index: 2;
+    position: relative;
+    top: -10px;
+    background-color: #e6ecec;
+    color: #1D3557;
+    font-size: 2rem;
+    font-family: Roboto, serif;
+    padding: 10px;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 1205px) {
     .grid {
@@ -98,6 +160,14 @@ main {
 
     nav ul li {
         padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #landing-image span {
+        font-size: 1.3rem;
     }
 }
 
@@ -131,5 +201,13 @@ main {
 
     nav ul li {
         padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    #landing-image span {
+        display: none;
     }
 }
