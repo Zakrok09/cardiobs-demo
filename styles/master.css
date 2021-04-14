@@ -8,8 +8,9 @@ body {
 }
 
 .grid {
+    width: 100%;
     display: grid;
-    grid-template: 6vh 4vh auto 15vh / 1fr 7fr 1fr;
+    grid-template: 70px 40px 80vh 15vh / 15% 70% 15%;
 }
 
 header {
@@ -19,7 +20,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #e4ece2;
+    background-color:#F1FAEE;
 
     border-color: #c4dcdd;
     border-width: 0.003vh;
@@ -68,4 +69,67 @@ nav ul li a {
 
 a {
     text-decoration: none;
+}
+
+main {
+    grid-area: 3 / 1 / span 1 / span 3;
+
+    background-image: url("/images/medics.jpg");
+    background-position: center;
+    background-size: cover;
+
+    display: grid;
+}
+
+@media only screen and (max-width: 1205px) {
+    .grid {
+        width: 100%;
+        display: grid;
+        grid-template: 70px 50px 80vh 15vh / 0% 100% 0%;
+    }
+
+    header {
+        padding: 0 10%;
+    } 
+
+    nav ul {
+        justify-content: center;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .grid {
+        width: 100%;
+        display: grid;
+        grid-template: 40px 50px 80vh 15vh / 0% 100% 0%;
+    }
+
+    header {
+        background-color: #1D3557;
+        justify-content: center;
+    }
+
+    header span {
+        color: #F1FAEE;
+    }
+
+    header img {
+        display: none;
+    }
+
+    nav {
+        padding: 1px;
+    }
+
+    nav ul {
+        justify-content: space-evenly;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
 }
