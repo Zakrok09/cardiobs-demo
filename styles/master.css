@@ -81,9 +81,10 @@ main {
 #landing-image {
     grid-area: 1 / 1 / 1 / span 13;
 
-    background-image: url("/images/medics.jpg");
+    background-image: url("/images/dims.jpg");
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 
     display: flex;
     flex-direction: column;
@@ -123,6 +124,40 @@ h1 {
 
 
 
+#infomration-panel {
+    grid-area: 2 / 4 / span 1 / span 7;
+    text-align: center;
+
+    font-size: 1.5rem;
+    font-family: Roboto;
+}
+
+#information-split {
+    display: flex;
+}
+
+#information-questions {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#information-questions span {
+    background-color: #528cb1;
+    display: block;
+    height: 40px;
+    width: 60%;
+    padding: 15px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+}
+
+#information-box {
+    width: 50%;
+    font-size: 1.2rem;
+}
 
 
 
