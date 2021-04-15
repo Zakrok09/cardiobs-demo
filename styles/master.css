@@ -5,12 +5,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: #F1FAEE;
+    overflow-x: hidden;
 }
 
 .grid {
     width: 100%;
     display: grid;
-    grid-template: 70px 45px auto 15vh / 15% 70% 15%;
+    grid-template: 70px 45px auto 75px / 15% 70% 15%;
 }
 
 header {
@@ -75,7 +76,8 @@ main {
     grid-area: 3 / 1 / span 1 / span 3;
     display: grid;
 
-    grid-template: 45vw 600px 600px / repeat(13, 1fr);
+    grid-template: 45vw auto 700px / repeat(13, 1fr);
+    grid-gap: 30px;
 }
 
 #landing-image {
@@ -125,6 +127,7 @@ h1 {
 
 
 #infomration-panel {
+    margin-top: -20px;
     grid-area: 2 / 4 / span 1 / span 7;
     text-align: center;
     font-size: 1.5rem;
@@ -200,15 +203,83 @@ h1 {
 }
 
 
+#general-info {
+    grid-area: 3 / 4 / span 1 / span 7;
 
+    padding: 10px 20px;
 
+    display: grid;
+    grid-template: 50px repeat(2, 1fr) 40px 1fr 1fr / repeat(4, 1fr);
+    grid-gap: 40px;
 
+    font-family: Roboto, serif;
+}
 
+#general-info h2 {
+    grid-area: 1 / 1 / span 1 / span 4;
 
+    font-size: 2rem;
+}
 
+#general-info-box-one {
+    grid-area: 2 / 1 / span 2 / span 2;
+}
 
+#general-info-box-two {
+    grid-area: 2 / 3 / span 2 / span 2;
+}
 
+.general-upper-boxes {
+    background-color: #eff8f8;
+    padding: 20px;
+    border-bottom:  2px solid #528cb1;
+    border-right: 2px solid #528cb1;
+    font-size: 1.25rem;
+}
 
+#general-info h3 {
+    grid-area: 4 / 1 / span 1 / span 4;
+}
+
+#general-small-box-one {
+    grid-area: 5 / 1 / span 1 / span 1;
+}
+
+#general-small-box-two {
+    grid-area: 5 / 2 / span 1 / span 1;
+}
+
+#general-small-box-three {
+    grid-area: 5 / 3 / span 1 / span 1;
+}
+
+#general-small-box-four {
+    grid-area: 5 / 4 / span 1 / span 1;
+}
+
+.general-lower-boxes {
+    background-color: #eff8f8;
+
+    padding: 10px;
+    border-bottom:  2px solid #528cb1;
+    border-right: 2px solid #528cb1;
+
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.general-info-icons {
+    font-size: 50px;
+}
+
+footer {
+    grid-area: 4 / 1 / span 1 / span 3;
+    background-color: #292c2f;
+    padding: 30px 20%;
+    color: #F1FAEE;
+    font-family: Roboto, serif;
+}
 
 
 
@@ -222,7 +293,7 @@ h1 {
     .grid {
         width: 100%;
         display: grid;
-        grid-template: 70px 50px 80vh 15vh / 0% 100% 0%;
+        grid-template: 70px 50px auto 75px / 0% 100% 0%;
     }
 
     header {
@@ -255,13 +326,32 @@ h1 {
         flex-direction: column;
         align-items: center;
     }
+
+    #general-info {
+        grid-area: 3 / 2 / span 1 / span 11;
+    }
+
+    .general-upper-boxes {
+        font-size: 1.2rem;
+    }
+
+    .general-lower-boxes {
+        font-size: 1rem;
+    }
+
+    footer {
+        grid-area: 4 / 1 / span 1 / span 3;
+        background-color: #292c2f;
+        padding: 30px 20%;
+        color: #F1FAEE;
+        font-family: Roboto, serif;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .grid {
-        width: 100%;
         display: grid;
-        grid-template: 40px 50px 80vh 15vh / 0% 100% 0%;
+        grid-template: 70px 50px auto 75px / 0% 100% 0%;
     }
 
     header {
@@ -298,7 +388,7 @@ h1 {
     }
 
     main {
-        grid-template: 45vw 600px 600px / repeat(13, 1fr);
+        grid-template: 45vw auto auto / repeat(13, 1fr);
     }
 
     #infomration-panel {
@@ -314,5 +404,60 @@ h1 {
     
     #information-questions button span {
         font-size: 1.3rem;
+    }
+
+    #general-info {
+        grid-area: 3 / 1 / span 1 / span 13;
+        grid-template: 50px repeat(4, 50px) 40px 1fr 1fr / repeat(4, 1fr);
+    }
+
+    #general-info h2 {
+        grid-area: 1 / 1 / span 2 / span 3;
+        font-size: 1.5rem;
+    }
+
+    #general-info-box-one {
+        grid-area: 2 / 1 / span 2 / span 3;
+    }
+
+    #general-info-box-two {
+        grid-area: 4 / 1 / span 2 / span 3;
+    }
+
+    .general-upper-boxes {
+        font-size: 1rem;
+    }
+
+    
+    #general-info h3 {
+        grid-area: 6 / 1 / span 1 / span 3;
+    }
+
+    #general-small-box-one {
+        grid-area: 7 / 1 / span 1 / span 1;
+    }
+
+    #general-small-box-two {
+        grid-area: 7 / 2 / span 1 / span 1;
+    }
+
+    #general-small-box-three {
+        grid-area: 8 / 1 / span 1 / span 1;
+    }
+
+    #general-small-box-four {
+        grid-area: 8 / 2 / span 1 / span 1;
+    }
+
+    .general-lower-boxes {
+        font-size: 1rem;
+    }
+
+    footer {
+        grid-area: 4 / 1 / span 1 / span 3;
+        background-color: #292c2f;
+        padding: 30px 20%;
+        color: #F1FAEE;
+        font-family: Roboto, serif;
     }
 }
