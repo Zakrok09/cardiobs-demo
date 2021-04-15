@@ -127,16 +127,21 @@ h1 {
 #infomration-panel {
     grid-area: 2 / 4 / span 1 / span 7;
     text-align: center;
-
     font-size: 1.5rem;
     font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 #information-split {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 #information-questions {
+    min-width: 300px;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -144,18 +149,53 @@ h1 {
     justify-content: center;
 }
 
-#information-questions span {
+#information-questions button {
+    border-radius: 4px;
     background-color: #528cb1;
-    display: block;
-    height: 40px;
-    width: 60%;
-    padding: 15px;
-    margin-bottom: 14px;
-    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#information-questions button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    font-size: 1.6rem;
+}
+
+#information-questions button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#information-questions button:hover span {
+    padding-right: 25px;
+}
+
+#information-questions button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+#button-appointment {
+    background-color: #E63946;
 }
 
 #information-box {
     width: 50%;
+    min-width: 300px;
     font-size: 1.2rem;
 }
 
@@ -204,6 +244,17 @@ h1 {
     #landing-image span {
         font-size: 1.3rem;
     }
+
+    #infomration-panel {
+        grid-area: 2 / 3 / span 1 / span 9;
+        font-size: 1.5rem;
+    }
+
+    #information-split {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -244,5 +295,24 @@ h1 {
 
     #landing-image span {
         display: none;
+    }
+
+    main {
+        grid-template: 45vw 600px 600px / repeat(13, 1fr);
+    }
+
+    #infomration-panel {
+        grid-area: 2 / 1 / span 1 / span 13;
+        font-size: 1.5rem;
+    }
+
+    #information-questions button {
+        padding: 10px;
+        width: 200px;
+        font-size: 10px;
+    }
+    
+    #information-questions button span {
+        font-size: 1.3rem;
     }
 }
