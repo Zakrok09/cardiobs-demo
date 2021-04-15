@@ -94,6 +94,8 @@ main {
     align-items: center;
 }
 
+
+
 #blacken {
     grid-area: 1 / 1 / 1 / span 13;
     background-color: black;
@@ -152,7 +154,7 @@ h1 {
     justify-content: center;
 }
 
-#information-questions button {
+.buttons-interactive {
     border-radius: 4px;
     background-color: #528cb1;
     border: none;
@@ -166,7 +168,7 @@ h1 {
     margin: 5px;
 }
 
-#information-questions button span {
+.buttons-interactive span {
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -174,7 +176,7 @@ h1 {
     font-size: 1.6rem;
 }
 
-#information-questions button span:after {
+.buttons-interactive span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -183,11 +185,11 @@ h1 {
     transition: 0.5s;
 }
 
-#information-questions button:hover span {
+.buttons-interactive:hover span {
     padding-right: 25px;
 }
 
-#information-questions button:hover span:after {
+.buttons-interactive:hover span:after {
     opacity: 1;
     right: 0;
 }
@@ -286,7 +288,81 @@ footer {
 
 
 
+/* Deinost page */
 
+#landing-deinost-variant {
+    grid-area: 1 / 1 / 1 / span 13;
+
+    background-image: url("/images/dims4.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing-deinost-variant span {
+    z-index: 2;
+    position: relative;
+    top: -10px;
+    background-color: #e6ecec;
+    color: #1D3557;
+    font-size: 2rem;
+    font-family: Roboto, serif;
+    padding: 10px;
+    padding-top: 10px;
+}
+
+#deinost-main {
+    grid-template: 35vw 500px 10px/ repeat(13, 1fr);
+    font-family: Roboto, serif;
+}
+
+#deinost-information {
+    grid-area: 2 / 4 / span 1 / span 7;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+    border-bottom: solid 1px #457B9D;
+    border-right: solid 1px #457B9D;
+}
+
+#deinost-pregledi-button {
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+#deinost-konsultaciq-button {
+    grid-area: 2 / 1 / span 1 /span 1;
+}
+
+#deinost-diagnostika-button {
+    grid-area: 3 / 1 / span 1 /span 1;
+}
+
+#deinost-infromation-box {
+    grid-area: 1 / 2 / span 3 / span 3;
+    background-color: #eff8f8;
+    font-size: 1.2rem;
+    padding: 40px;
+    border-left: solid 1px #c0d0db;
+}
+
+#deinost-infromation-box span {
+    text-align: center;
+}
+
+.deinost-button {
+    background-color: #eff8f8;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+
+    font-size: 1.5rem;
+}
+
+/* end deinost page */
 
 
 @media only screen and (max-width: 1205px) {
@@ -346,6 +422,21 @@ footer {
         color: #F1FAEE;
         font-family: Roboto, serif;
     }
+
+    /* deinost start */
+    .deinost-button {
+        font-size: 1.2rem;
+    }
+    
+    #deinost-infromation-box {
+        font-size: 1rem;
+        padding: 1px;
+    }
+
+    #deinost-information {
+        grid-area: 2 / 2 / span 1 / span 11;
+    }
+    /* deinost end  */
 }
 
 @media only screen and (max-width: 600px) {
@@ -387,6 +478,40 @@ footer {
         display: none;
     }
 
+    /* deinost site  */
+    #landing-deinost-variant span {
+        display: none;
+    }
+
+    #deinost-information {
+        grid-area: 2 / 1 / span 1 / span 13;
+        grid-template: 1fr 2fr 2fr / 33% 33% 33%;
+        width: 90%;
+        margin: 0 10px;
+    }
+
+    #deinost-pregledi-button {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    #deinost-konsultaciq-button {
+        grid-area: 1 / 2 / span 1 / span 1;
+    }
+
+    #deinost-diagnostika-button {
+        grid-area: 1 / 3/ span 1 / span 1;
+    }
+
+    #deinost-infromation-box {
+        grid-area: 2 / 1 / span 2 / span 3;
+        padding: 20px;
+    }
+
+    .deinost-button {
+        font-size: 1rem;
+    }
+    /* end deinost site */
+
     main {
         grid-template: 45vw auto auto / repeat(13, 1fr);
     }
@@ -396,13 +521,13 @@ footer {
         font-size: 1.5rem;
     }
 
-    #information-questions button {
+    .buttons-interactive {
         padding: 10px;
         width: 200px;
         font-size: 10px;
     }
     
-    #information-questions button span {
+    .buttons-interactive span {
         font-size: 1.3rem;
     }
 
