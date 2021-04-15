@@ -154,7 +154,7 @@ h1 {
     justify-content: center;
 }
 
-#information-questions button {
+.buttons-interactive {
     border-radius: 4px;
     background-color: #528cb1;
     border: none;
@@ -168,7 +168,7 @@ h1 {
     margin: 5px;
 }
 
-#information-questions button span {
+.buttons-interactive span {
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -176,7 +176,7 @@ h1 {
     font-size: 1.6rem;
 }
 
-#information-questions button span:after {
+.buttons-interactive span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -185,11 +185,11 @@ h1 {
     transition: 0.5s;
 }
 
-#information-questions button:hover span {
+.buttons-interactive:hover span {
     padding-right: 25px;
 }
 
-#information-questions button:hover span:after {
+.buttons-interactive:hover span:after {
     opacity: 1;
     right: 0;
 }
@@ -485,7 +485,9 @@ footer {
 
     #deinost-information {
         grid-area: 2 / 1 / span 1 / span 13;
-        grid-template: 1fr 2fr 2fr / 1fr 1fr 1fr;
+        grid-template: 1fr 2fr 2fr / 33% 33% 33%;
+        width: 90%;
+        margin: 0 10px;
     }
 
     #deinost-pregledi-button {
@@ -504,6 +506,10 @@ footer {
         grid-area: 2 / 1 / span 2 / span 3;
         padding: 20px;
     }
+
+    .deinost-button {
+        font-size: 1rem;
+    }
     /* end deinost site */
 
     main {
@@ -515,13 +521,13 @@ footer {
         font-size: 1.5rem;
     }
 
-    #information-questions button {
+    .buttons-interactive {
         padding: 10px;
         width: 200px;
         font-size: 10px;
     }
     
-    #information-questions button span {
+    .buttons-interactive span {
         font-size: 1.3rem;
     }
 
