@@ -83,7 +83,7 @@ main {
 #landing-image {
     grid-area: 1 / 1 / 1 / span 13;
 
-    background-image: url("/images/dims.jpg");
+    background-image: url("./images/dims.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -293,7 +293,7 @@ footer {
 #landing-deinost-variant {
     grid-area: 1 / 1 / 1 / span 13;
 
-    background-image: url("/images/dims4.jpg");
+    background-image: url("../images/dims4.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
