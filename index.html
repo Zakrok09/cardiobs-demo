@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <!-- Meta tags -->
     <meta charset="UTF-8">
@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./scripts/script.js" defer></script>
     <!-- Titles -->
-    <title>Cardio Center bg</title>
+    <title>Кардиологичен център Бургас</title>
 </head>
 <body>
     <div class="grid">
         <header>
-            <img src="./images/logo.png" alt="Cardio center logo">
+            <img src="./images/logo.png" alt="CardioCenter Бургас">
             <span>0876/999-539</span>
         </header>
         <nav>
-            <ul>
+            <ul role="presentation">
                 <li><a href="">Начало</a></li>
                 <li><a href="">Услуги</a></li>
                 <li><a href="">За нас</a></li>
@@ -28,19 +28,19 @@
         <main>
             <div id="landing-image">
                 <h1>Кардиологичен център Бургас</h1>
-                <span>Клиника за справяне със сърдечни заболявания. bruh</span>
+                <span aria-label="Подзаглавие в приемната част на сайта">Клиника за справяне със сърдечни заболявания. bruh</span>
             </div>
             <div id="blacken"></div>
             <section id="infomration-panel">
-                <h2>Желаете да: </h2>
+                <h2 role="complementary">Желаете да: </h2>
                 <div id="information-split">
                     <div id="information-questions">
-                        <button id="button-appointment"><span>Запишете час?</span></button>
-                        <button id="button-doctors"><span>Видите екипа?</span></button>
-                        <button id="button-covid19"><span>Covid-19 мерки?</span></button>
+                        <button id="button-appointment" aria-label="Бутон, който показва информация за записване"><span>Запишете час?</span></button>
+                        <button id="button-doctors" aria-label="Бурон, който показва информация за екипа"><span>Видите екипа?</span></button>
+                        <button id="button-covid19" aria-label="Бутон, който показва ковид мерки"><span>Covid-19 мерки?</span></button>
                     </div>
                     <div id="information-box">
-                        <p id="information-box-text">За да запишете час се обадете на 0876/999-539</p>
+                        <p id="information-box-text" aria-label="Променаща се информация, спрямо натиснатия бутон">За да запишете час се обадете на 0876/999-539</p>
                     </div>
                 </div>
             </section>
@@ -52,23 +52,23 @@
                 <div id="general-info-box-two" class="general-upper-boxes" >
                     <span>Това ни прави напълно уверени и спокойни, че сме осигурили широко поле за действие, в което да приложим нашите знания, умения и професионален опит. </span>
                 </div>
-                <h3>Защо да изберете нас?</h3>
-                <div id="general-small-box-one" class="general-lower-boxes">
+                <h3 role="complementary">Защо да изберете нас?</h3>
+                <div id="general-small-box-one" class="general-lower-boxes" role="complementary">
                     <i class="fa fa-h-square" class="general-info-icons" style="font-size:37px;"></i>
                     <br>
                     <span>Силна апаратура</span>
                 </div>
-                <div id="general-small-box-two" class="general-lower-boxes">
+                <div id="general-small-box-two" class="general-lower-boxes" role="complementary">
                     <i class="fa fa-user-md" class="general-info-icons" style="font-size:37px;"></i>
                     <br>
                     <span>Професионални лекари</span>
                 </div>
-                <div id="general-small-box-three" class="general-lower-boxes">
+                <div id="general-small-box-three" class="general-lower-boxes" role="complementary">
                     <i class="fa fa-heartbeat" class="general-info-icons" style="font-size:37px;"></i>
                     <br>
                     <span>Готин сайт</span>
                 </div>
-                <div id="general-small-box-four" class="general-lower-boxes">
+                <div id="general-small-box-four" class="general-lower-boxes" role="complementary">
                     <i class="fa fa-hospital-o" class="general-info-icons" style="font-size:37px;"></i>
                     <br>
                     <span>Хубав кабинет</span>
